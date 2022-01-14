@@ -139,10 +139,10 @@ def main():
         if controlLoop == 0:
             controlLoop = True
         if controlLoop == "X":
-            print(f"{userName_X}(X) has win!")
+            print(f"{userName_X.capitalize()}(X) has win!")
             controlLoop = False
         if controlLoop == "O":
-            print(f"{userName_O}(O) has win!")
+            print(f"{userName_O.capitalize()}(O) has win!")
             controlLoop = False
         
     
