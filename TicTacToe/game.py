@@ -1,5 +1,6 @@
 import os, random
 from tabulate import tabulate
+import numpy as np
 
 #Function to clear the screen
 def cls():
@@ -62,8 +63,27 @@ def find(element, matrix):
 def printGrid(grid):
     print(tabulate(grid, tablefmt='grid'))
 
-def verifyGrid(grid):
-    return True
+def checkRows(board):
+    for row in board:
+        if len(set(row)) == 1:
+            return row[0]
+    return 0
+
+def checkDiagonals(board):
+    if len(set([board[i][i] for i in range(len(board))])) == 1:
+        return board[0][0]
+    if len(set([board[i][len(board)-i-1] for i in range(len(board))])) == 1:
+        return board[0][len(board)-1]
+    return 0
+
+def checkWin(board):
+    #transposition to check rows, then columns
+    for newBoard in [board, np.transpose(board)]:
+        result = checkRows(newBoard)
+        if result:
+            return result
+    return checkDiagonals(board)
+
 
 def main():
     #Global variables
@@ -113,7 +133,15 @@ def main():
                 controlUser = "X"
 
         #Verify grid
-        controlLoop = verifyGrid(grid[0])
+        #controlLoop = verifyGrid(grid[0])
+        print()
+        controlLoop = checkWin(grid[0])
+        if controlLoop == "X":
+            print(f"{userName_X}(X) has win!")
+            controlLoop = False
+        if controlLoop == "O":
+            print(f"{userName_O}(O) has win!")
+            controlLoop = False
     
     print(text["endGame"])
 
