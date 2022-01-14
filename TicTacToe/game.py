@@ -8,33 +8,20 @@ def cls():
 
 #Texts of prints and messages
 def generalMessages():
-    #First phase
-    introPhaseOne = "Welcome to: TIC-TAC-TOE"
-    getUserName_X = "\nPlease enter the name of the first player (x): "
-    getUserName_O = "Please enter the name of the second player (o): "
-    
-    #Second phase
-    introPhaseTwo = "Perfect! Now les't go to set the Grid\n"
-    getGrid = "How many rows and columns do you want your grid? (minimun 3): "
-
-    #Third phase
-    introPhaseThree = "Let's play!\n"
-    endGame = "Thank you for playing!"
-
     #Dictionary with all the text
     messagesDict = {
-        #Fisrt Phase
-        "introPhaseOne": introPhaseOne,
-        "getUserName_X": getUserName_X,
-        "getUserName_O": getUserName_O,
+        #First Phase
+        "introPhaseOne": "Welcome to: TIC-TAC-TOE",
+        "getUserName_X": "\nPlease enter the name of the first player (x): ",
+        "getUserName_O": "Please enter the name of the second player (o): ",
 
         #Second phase
-        "introPhaseTwo": introPhaseTwo,
-        "getGrid": getGrid,
+        "introPhaseTwo": "Perfect! Now les't go to set the Grid\n",
+        "getGrid": "How many rows and columns do you want your grid? (minimun 3): ",
 
         #Third phase
-        "introPhaseThree": introPhaseThree,
-        "endGame": endGame
+        "introPhaseThree": "Let's play!\n",
+        "endGame": "Thank you for playing!"
     }
     return messagesDict
 
