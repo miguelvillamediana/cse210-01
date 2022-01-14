@@ -1,5 +1,4 @@
 import os, random
-from ssl import Options
 from tabulate import tabulate
 
 #Function to clear the screen
