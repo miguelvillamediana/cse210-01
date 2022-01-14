@@ -136,12 +136,15 @@ def main():
         #controlLoop = verifyGrid(grid[0])
         print()
         controlLoop = checkWin(grid[0])
+        if controlLoop == 0:
+            controlLoop = True
         if controlLoop == "X":
             print(f"{userName_X}(X) has win!")
             controlLoop = False
         if controlLoop == "O":
             print(f"{userName_O}(O) has win!")
             controlLoop = False
+        
     
     print(text["endGame"])
 
