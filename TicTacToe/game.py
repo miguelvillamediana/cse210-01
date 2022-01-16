@@ -1,3 +1,7 @@
+# Assignment: Developing a TIC-TAC-TOE game
+# Class: CSE 210
+# Author: Jose Miguel Villamediana Osorio
+
 import os, random
 from tabulate import tabulate
 import numpy as np
